@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="Scss/page-reservation.css">
+</head>
+
+<body>
+    <form id="reservation" action="/reserver" method="POST" class="form">
+
+        <div>
+            <h2>Réservation</h2>
+            <div>
+                <input class="uppercased" type="text" name="nom" id="name" placeholder="Entrer votre nom">
+            </div>
+            <div>
+                <input class="uppercased" type="text" name="prenom" id="prenom" placeholder="Entrer votre prénom">
+            </div>
+            <div>
+                <input class="uppercased" type="email" name="email" id="email" placeholder="Enter votre email">
+            </div>
+            <div>
+                <input class="uppercased" type="tel" name="telephone" id="telephone"
+                    placeholder="Enter votre numéro de téléphne">
+            </div>
+            <div>
+                <label for="date-naiss">Date de naissance</label>
+                <input type="date" name="naissance" id="date-naiss">
+            </div>
+            <div>
+                <label for="date">De</label>
+                <input type="date" name="dateDebut" id="date1">
+            </div>
+            <div>
+                <label for="date">Au</label>
+                <input type="date" name="dateFin" id="date2">
+            </div>
+            <div>
+                <input type="number" name="nombrePersonne" id="nombre-personne"
+                    placeholder="Enter le nombre de personne">
+            </div>
+        </div>
+
+        <div>
+            <button id="submit" type="submit">submit</button>
+            <input type="hidden" name="cin" class="cin">
+        </div>
+    </form>
+
+    <form id="reservation" action="/modifier_reservation" method="POST" class="form">
+
+        <div>
+            <h2>Mise a jour</h2>
+            <div class="reservationID">
+            </div>
+            <div>
+                <input class="uppercased" type="text" name="nom" id="name" placeholder="Entrer votre nom">
+            </div>
+            <div>
+                <input class="uppercased" type="text" name="prenom" id="prenom" placeholder="Entrer votre prénom">
+            </div>
+            <div>
+                <input class="uppercased" type="email" name="email" id="email" placeholder="Enter votre email">
+            </div>
+            <div>
+                <input class="uppercased" type="tel" name="telephone" id="telephone"
+                    placeholder="Enter votre numéro de téléphne">
+            </div>
+            <div>
+                <label for="date-naiss">Date de naissance</label>
+                <input type="date" name="naissance" id="date-naiss">
+            </div>
+            <div>
+                <label for="date">De</label>
+                <input type="date" name="dateDebut" id="date1">
+            </div>
+            <div>
+                <label for="date">Au</label>
+                <input type="date" name="dateFin" id="date2">
+            </div>
+            <div>
+                <input type="number" name="nombrePersonne" id="nombre-personne"
+                    placeholder="Enter le nombre de personne">
+            </div>
+        </div>
+
+        <div>
+            <button id="submit" type="submit">submit</button>
+            <input type="hidden" name="cin" class="cin">
+        </div>
+    </form>
+
+    <form action="/supprimer_reservation" method="POST" class="form">
+        <div>
+            <h1>Supprimer votre reservation</h1>
+        </div>
+        <div class="reservationID">
+        </div>
+        <div>
+            <button id="insc-submit" type="submit">submit</button>
+            <input type="hidden" name="cin" class="cin">
+        </div>
+    </form>
+
+    <script>
+        var cin = parseInt(localStorage.getItem('cin')) || -1;
+        var cins = document.getElementsByClassName('cin');
+        for (var i = 0; i < cins.length; i++) {
+            cins[i].value = cin;
+        }
+
+        var reservations = localStorage.getItem('reservations').split(',') || [];
+        var reservationsHTML = '<select name="resID">';
+        for (var i = 0; i < reservations.length; i++) {
+            reservationsHTML += '<option value="' + reservations[i] + '">' + reservations[i] + '</option>';
+        }
+        reservationsHTML += '</select>';
+
+        var resIDs = document.getElementsByClassName('reservationID');
+        for (var i = 0; i < resIDs.length; i++) {
+            resIDs[i].innerHTML = reservationsHTML;
+        }
+    </script>
+</body>
+
+</html>

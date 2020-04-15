@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="Scss/page-inscription.css">
+</head>
+
+<body>
+    <form action="/register" method="POST" class="form">
+        <div>
+            <h1>Inscription</h1>
+            <div>
+                <input class="uppercased" type="text" name="nom" id="insc-name" placeholder="Entrer votre nom">
+            </div>
+            <div>
+                <input class="uppercased" type="text" name="prenom" id="insc-prenom" placeholder="Entrer votre prénom">
+            </div>
+            <div>
+                <input class="uppercased" type="email" id="insc-email" name="email" placeholder="Enter votre email">
+            </div>
+            <div>
+                <input type="password" name="password" id="insc-pass" placeholder="Entrer votre password">
+            </div>
+            <div>
+                <input type="password" name="confPassword" id="insc-confPass" placeholder="Confirmer votre password">
+            </div>
+            <div>
+                <input type="tel" id="insc-telephone" name="telephone" placeholder="Enter votre numéro de téléphone">
+            </div>
+
+        </div>
+        <div>
+            <button id="insc-submit" type="submit">submit</button>
+        </div>
+    </form>
+
+    <form action="/modifier_compte" method="POST" class="form">
+        <div>
+            <h1>Mise a jour</h1>
+            <div>
+                <input class="uppercased" type="text" name="nom" id="insc-name" placeholder="Entrer votre nom">
+            </div>
+            <div>
+                <input class="uppercased" type="text" name="prenom" id="insc-prenom" placeholder="Entrer votre prénom">
+            </div>
+            <div>
+                <input class="uppercased" type="email" id="insc-email" name="email" placeholder="Enter votre email">
+            </div>
+            <div>
+                <input type="password" name="password" id="insc-pass" placeholder="Entrer votre password">
+            </div>
+            <div>
+                <input type="password" name="confPassword" id="insc-confPass" placeholder="Confirmer votre password">
+            </div>
+            <div>
+                <input type="tel" id="insc-telephone" name="telephone" placeholder="Enter votre numéro de téléphone">
+            </div>
+
+        </div>
+        <div>
+            <button id="insc-submit" type="submit">submit</button>
+            <input type="hidden" name="cin" class="cin">
+        </div>
+    </form>
+
+    <form action="/supprimer_compte" method="POST" class="form">
+        <div>
+            <h1>Supprimer votre compte</h1>
+        </div>
+        <div>
+            <button id="insc-submit" type="submit">submit</button>
+            <input type="hidden" name="cin" class="cin">
+        </div>
+    </form>
+
+    <script>
+        var cin = parseInt(localStorage.getItem('cin')) || -1;
+        var cins = document.getElementsByClassName('cin');
+        for (var i = 0; i < cins.length; i++) {
+            cins[i].value = cin;
+        }
+    </script>
+</body>
+
+</html>

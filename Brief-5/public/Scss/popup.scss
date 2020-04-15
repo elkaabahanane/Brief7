@@ -1,0 +1,13 @@
+@import "variables1.scss";
+.popup {
+  background-color: $color4;
+  font-family: $font;
+  font-size: $fnt-size1;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25%;
+  text-align: center;
+  border-radius: 10px;
+}

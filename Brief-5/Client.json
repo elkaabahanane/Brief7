@@ -1,0 +1,25 @@
+[
+  {
+    "Cin": 1,
+    "Nom": "Mark",
+    "Prenom": "Doe",
+    "Email": "mark@doe.com",
+    "Password": "maroc2020",
+    "Telephone": "0666666666"
+  },
+  {
+    "Cin": 2,
+    "Prenom": "Doe",
+    "Email": "jane@doe.com",
+    "Password": "maroc2020",
+    "Telephone": "0666666666"
+  },
+  {
+    "Cin": 3,
+    "Nom": "Elkaaba",
+    "Prenom": "Hanane",
+    "Email": "eheheh@eeheh.com",
+    "Password": "maroc2020",
+    "Telephone": "0777777777"
+  }
+]

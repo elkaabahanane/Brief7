@@ -1,0 +1,363 @@
+@import "variables1.scss";
+body {
+  margin: 0;
+}
+header {
+  height: 100vh;
+  .Image-header {
+    background-image: url(../Img/slider-1.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .top-header {
+      display: flex;
+      padding: 25px;
+    }
+    #hamburger {
+      font-size: 30px;
+      color: #fff;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      display: none;
+    }
+  }
+  p {
+    color: $color-white;
+    font-size: $font-size5;
+    text-align: center;
+    margin-top: 15%;
+    letter-spacing: $letter-space;
+  }
+}
+.logo img {
+  height: 30px;
+}
+nav {
+  ul {
+    display: flex;
+    font-family: $font;
+
+    li {
+      list-style: none;
+      font-size: $font-sizee;
+      margin-left: 30%;
+
+      a {
+        text-decoration: none;
+        color: $color-white;
+      }
+      a:hover {
+        color: $color3;
+      }
+    }
+  }
+}
+
+@mixin button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  // padding: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@mixin size {
+  width: 100%;
+  height: 100%;
+}
+.image-slider {
+  position: relative;
+  width: 70%;
+  height: 500px;
+  margin: 6% auto;
+  border: 3px solid $color2;
+  box-shadow: 0px 0px 10px 2px $color1;
+  font-size: 0;
+
+  .image-container {
+    @include size;
+    .img {
+      @include size;
+    }
+  }
+}
+
+.btn-left {
+  @include button;
+}
+.btn-right {
+  @include button;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+  background-color: $color2;
+}
+
+.btn-left {
+  left: 0px;
+}
+.btn-right {
+  right: 0px;
+}
+
+.parts {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin Image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 183px;
+}
+@mixin span {
+  .span {
+    background-color: $color2;
+    color: $color-white;
+    border-radius: 3%;
+    padding: 0.5% 4%;
+    font-family: $font;
+    display: inline-block;
+    margin-top: 60%;
+    margin-left: 2%;
+    border-radius: 5%;
+  }
+}
+.parent {
+  border: 1px solid $color4;
+  width: 23%;
+  cursor: pointer;
+  margin-top: 2%;
+  .image1 {
+    background-image: url("../Img/Image1.jpg");
+    @include Image;
+  }
+  .image2 {
+    background-image: url("../Img/Image2.jpg");
+    @include Image;
+  }
+  .image3 {
+    background-image: url("../Img/Image3.jpg");
+    @include Image;
+  }
+  .image4 {
+    background-image: url("../Img/Image4.jpg");
+    @include Image;
+  }
+  .image5 {
+    background-image: url("../Img/Image5.jpg");
+    @include Image;
+  }
+  .image6 {
+    background-image: url("../Img/Image6.jpg");
+    @include Image;
+  }
+  .image7 {
+    background-image: url("../Img/Image7.jpg");
+    @include Image;
+  }
+
+  .image8 {
+    background-image: url("../Img/Image8.jpg");
+    @include Image;
+  }
+  .span {
+    background-color: $color2;
+    color: $color-white;
+    border-radius: 3%;
+    padding: 0.5% 4%;
+    font-family: $font;
+    display: inline-block;
+    margin-top: 53%;
+    margin-left: 2%;
+    border-radius: 5%;
+  }
+}
+
+.contenu {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  h1 {
+    font-family: $font;
+    font-size: $fnt-size1;
+    letter-spacing: 2px;
+    color: $color1;
+  }
+  .line {
+    width: 12%;
+    height: 2px;
+    background-color: $color2;
+  }
+  p {
+    font-family: $font;
+    color: $color2;
+    font-size: $font-size2;
+    letter-spacing: $letter-space;
+  }
+}
+.part3 {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid $color4;
+  padding: 5%;
+  font-size: $font-size3;
+  font-family: $font;
+  color: $color3;
+}
+
+footer {
+  background-color: $color2;
+  margin-top: 2%;
+  .sections {
+    display: flex;
+    justify-content: space-around;
+    div {
+      width: 26%;
+      .logo {
+        height: 30px;
+        padding-top: 15%;
+      }
+    }
+    h2 {
+      font-size: $fnt-size1;
+      color: $color-white;
+      margin-top: 16%;
+      margin-bottom: 8%;
+      font-family: $font;
+      color: $color1;
+    }
+    input {
+      border: none;
+      background-color: $color2;
+      border-bottom: 2px solid $color1;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 1%;
+      font-family: $font;
+      font-size: $font-size2;
+      color: $color4;
+      span {
+        font-size: $font-size2;
+        color: $color1;
+        font-weight: $font-weight;
+        font-family: $font;
+      }
+      a {
+        text-decoration: none;
+        color: $color4;
+      }
+    }
+  }
+}
+.part-copyright {
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: $color1;
+    display: inline-block;
+    text-align: center;
+    padding-left: 2%;
+    i {
+      margin-left: 8%;
+      margin-bottom: 2%;
+    }
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .parts {
+    .parent {
+      .span {
+        margin-top: 44%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .btn-left,
+  .btn-right {
+    background-color: $color2;
+  }
+  .image-slider {
+    width: 90%;
+  }
+  .parts {
+    flex-wrap: wrap;
+    .parent {
+      width: 40%;
+      .span {
+        margin-top: 35%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  header .Image-header #hamburger {
+    display: block;
+  }
+  .top-header nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background: $color2;
+    width: 100%;
+
+    ul.menu {
+      display: block;
+      padding: 0;
+
+      li {
+        margin: 10px;
+        border-bottom: 1px solid $color1;
+        width: 80%;
+        text-align: center;
+        padding-bottom: 2%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 425px) {
+  .image-slider {
+    width: 90%;
+    height: 30%;
+  }
+  .parts {
+    display: flex;
+    flex-wrap: wrap;
+    .parent {
+      width: 90%;
+      .span {
+        margin-top: 40%;
+      }
+    }
+  }
+  footer {
+    .sections {
+      display: block;
+      padding-left: 13%;
+      div {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .parts {
+    .parent {
+      .span {
+        margin-top: 50%;
+      }
+    }
+  }
+}

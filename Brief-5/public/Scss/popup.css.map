@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,MAAM,CAAC;EACL,gBAAgB,ECUT,IAAI;EDTX,WAAW,ECHN,IAAI,EAAE,SAAS,EAAE,KAAK,EAAE,IAAI,CAAC,KAAK;EDIvC,SAAS,ECDC,IAAI;EDEd,KAAK,EAAE,GAAG;EACV,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,SAAS,EAAE,gBAAgB;EAC3B,IAAI,EAAE,GAAG;EACT,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "popup.scss",
+        "variables1.scss"
+    ],
+    "names": [],
+    "file": "popup.css"
+}
